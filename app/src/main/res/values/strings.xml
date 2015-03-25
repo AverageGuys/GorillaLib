@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GorillaLib</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_about">About</string>
+
+    <string name="txt_about">About</string>
+    <string name="txt_about_details">Sample app to demonstrate GorillaLib.
+        \n\nSource available at <a href="https://github.com/AverageGuys/GorillaLib">GitHub</a>.
+    </string>
+</resources>
