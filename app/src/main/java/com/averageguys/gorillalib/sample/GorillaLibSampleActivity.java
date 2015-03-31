@@ -74,7 +74,7 @@ public class GorillaLibSampleActivity extends ActionBarActivity {
             Log.i(TAG, "Device name manufacturer: " + GorillaGeneral.getDeviceNameModel(false));
             Log.i(TAG, "Device name model: " + GorillaGeneral.getDeviceNameModel(true));
             Log.i(TAG, "Device app version: " + GorillaGeneral.getAppVersion(getActivity()));
-            Log.i(TAG, "Device language: " + GorillaGeneral.getLanguage(getActivity()));
+            Log.i(TAG, "Device language: " + GorillaGeneral.getLanguage());
 
             return rootView;
         }

@@ -29,7 +29,13 @@ import java.util.Locale;
  * Created by Android Dev on 25/3/2015.
  */
 public class GorillaGeneral {
-
+    /**
+     * Returns device ID.
+     *
+     * @param context Activity's context
+     * @return  Device ID
+     * @see     android.telephony.TelephonyManager
+     */
     // Requires
     // <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     public static String getDeviceID(Context context) {
@@ -43,6 +49,14 @@ public class GorillaGeneral {
         return devID;
     }
 
+    /**
+     * Returns device model if param boolean isModel is TRUE or device
+     * manufacturer if FALSE.
+     *
+     * @param isModel if TRUE - return device model, if FALSE - return device manufacturer
+     * @return  Device model or device manufacture
+     * @see     android.os.Build
+     */
     public static String getDeviceNameModel(Boolean isModel) {
         String result;
 
@@ -55,10 +69,23 @@ public class GorillaGeneral {
         return result;
     }
 
+    /**
+     * Returns device OS version
+     *
+     * @return  Device OS version
+     * @see     android.os.Build
+     */
     public static String getOSVersion() {
         return Build.VERSION.RELEASE;
     }
 
+    /**
+     * Returns app version
+     *
+     * @return  App version
+     * @see     android.content.pm.PackageManager
+     * @see     android.content.pm.PackageInfo
+     */
     public static String getAppVersion(Context context) {
         String result = "";
         try {
@@ -72,7 +99,13 @@ public class GorillaGeneral {
         return result;
     }
 
-    public static String getLanguage(Context context) {
+    /**
+     * Returns device default language settings
+     *
+     * @return  Device default language
+     * @see     java.util.Locale
+     */
+    public static String getLanguage() {
         return Locale.getDefault().getLanguage();
     }
 }

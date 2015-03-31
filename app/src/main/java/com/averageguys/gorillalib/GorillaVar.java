@@ -21,9 +21,7 @@ public class GorillaVar {
     public static boolean isNumeric(String string) {
 
         if (string == null || string.length() == 0) {
-
             return false;
-
         }
 
         int l = string.length();
@@ -32,30 +30,20 @@ public class GorillaVar {
         int dotCount = 0;
 
         for (int i = 0; i < l; i++) {
-
             if (!Character.isDigit(string.codePointAt((i)))) {
-
                 f = string.substring(i, i + 1);
 
                 if (!f.equals(".")) {
                     return false;
                 } else {
-
                     dotCount++;
-
                     if (dotCount >= 2) {
                         return false;
                     }
-
                 }
-
-
             }
-
         }
-
         return true;
-
     }
 
     public static String getIntegerValueFromFloat(float myValue) {
@@ -81,14 +69,12 @@ public class GorillaVar {
         temp = temp.replace("{amp}", "&");
 
         return temp;
-
     }
 
     public static String handleString(String value) {
         String result = "";
         result = value.replace("'", "0x22");
         return result;
-
     }
 
     public static String removeLastCharSeparator(String data, String delimiter) {
@@ -98,7 +84,6 @@ public class GorillaVar {
                 result = data.substring(0, data.length() - 1);
             }
         }
-
         return result;
     }
 
