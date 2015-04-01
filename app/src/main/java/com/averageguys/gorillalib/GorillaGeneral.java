@@ -29,6 +29,7 @@ import java.util.Locale;
  * Created by Android Dev on 25/3/2015.
  */
 public class GorillaGeneral {
+    private static final String TAG = "GorillaGeneral";
     /**
      * Returns device ID.
      *
@@ -94,7 +95,7 @@ public class GorillaGeneral {
                     context.getPackageName(), 0);
             result = info.versionName;
         } catch (Exception e) {
-            Log.e("YourActivity", "Error getting version");
+            Log.e(TAG, "Error getting version");
         }
         return result;
     }
