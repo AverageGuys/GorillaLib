@@ -14,10 +14,4 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
 
-    <com.averageguys.gorillalib.image.CircleCropImageView
-        android:id="@+id/cc_imgview"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_centerInParent="true" />
-
 </RelativeLayout>
