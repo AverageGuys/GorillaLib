@@ -27,6 +27,14 @@ import android.widget.EditText;
  * Created by Android Dev on 25/3/2015.
  */
 public class GorillaUtils {
+    /**
+     * Hide visible softKeyboard if any view from the screen is touched/clicked
+     *
+     * @param view View in Activity
+     * @param activity Activity's context
+     * @see     android.view.View;
+     * @see     android.view.ViewGroup;
+     */
     public static void hideKeyboard(View view, final Activity activity) {
         if (!(view instanceof EditText)) {
             view.setOnTouchListener(new View.OnTouchListener() {
@@ -51,6 +59,12 @@ public class GorillaUtils {
         }
     }
 
+    /**
+     * Hide visible softKeyboard if any view from the screen is touched/clicked
+     *
+     * @param activity Activity's context
+     * @see     android.view.inputmethod.InputMethodManager
+     */
     public static void hideSoftKeyboard(Activity activity) {
         try {
             InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -60,6 +74,13 @@ public class GorillaUtils {
         }
     }
 
+    /**
+     * Hide visible softKeyboard if any view from the screen is touched/clicked
+     *
+     * @param mgr AssetManager
+     * @param isBold boolean true if bold
+     * @see     android.graphics.Typeface;
+     */
     public static Typeface setFont(AssetManager mgr, Boolean isBold) {
         String fontPath = "";
 
