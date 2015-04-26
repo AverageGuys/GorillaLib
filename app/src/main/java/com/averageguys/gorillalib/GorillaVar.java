@@ -18,8 +18,8 @@ package com.averageguys.gorillalib;
  * Created by Android Dev on 25/3/2015.
  */
 public class GorillaVar {
+    // Check if string is number
     public static boolean isNumeric(String string) {
-
         if (string == null || string.length() == 0) {
             return false;
         }
@@ -46,6 +46,7 @@ public class GorillaVar {
         return true;
     }
 
+    // Convert float to string
     public static String getIntegerValueFromFloat(float myValue) {
         String strTemp1 = "";
 
@@ -56,9 +57,9 @@ public class GorillaVar {
         strTemp1 = ee;
 
         return strTemp1;
-
     }
 
+    // Convert string into proper format
     public static String formatString(String dString) {
         String temp = "";
 
@@ -71,12 +72,14 @@ public class GorillaVar {
         return temp;
     }
 
+    // Convert string into proper format
     public static String handleString(String value) {
         String result = "";
         result = value.replace("'", "0x22");
         return result;
     }
 
+    // Remove last character separator
     public static String removeLastCharSeparator(String data, String delimiter) {
         String result = "";
         if (data.length() > 0) {
@@ -86,5 +89,4 @@ public class GorillaVar {
         }
         return result;
     }
-
 }

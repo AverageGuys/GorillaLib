@@ -45,7 +45,7 @@ public class GorillaNetwork {
      *
      * @param activity Current Activity
      */
-    public static void isConnected(Activity activity) {
+        public static void isConnected(Activity activity) {
         if (!isNetworkConnected(activity)) {
             Log.e(TAG, "IS CONNECTED? NO");
             GorillaDialog.showAlertDialog(activity, "", "No internet connection available.", "Ok");
