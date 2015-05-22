@@ -18,7 +18,12 @@ package com.averageguys.gorillalib;
  * Created by Android Dev on 25/3/2015.
  */
 public class GorillaVar {
-    // Check if string is number
+    /**
+     * Validate if string is number
+     *
+     * @param string string value to be validated
+     * @return boolean if string is numeric
+     */
     public static boolean isNumeric(String string) {
         if (string == null || string.length() == 0) {
             return false;
@@ -46,11 +51,17 @@ public class GorillaVar {
         return true;
     }
 
-    // Convert float to string
-    public static String getIntegerValueFromFloat(float myValue) {
+    /**
+     * Convert string value from float
+     *
+     * @param floatValue float value to be validated
+     * @return extracted string value from float
+     *
+     */
+    public static String getIntegerValueFromFloat(float floatValue) {
         String strTemp1 = "";
 
-        strTemp1 = "" + myValue;
+        strTemp1 = "" + floatValue;
         int pos = strTemp1.indexOf(".");
         String ee = strTemp1.substring(pos + 1);
 
@@ -59,27 +70,48 @@ public class GorillaVar {
         return strTemp1;
     }
 
-    // Convert string into proper format
-    public static String formatString(String dString) {
+    /**
+     * Format string from hexadecimal value
+     *
+     * @param string string value to be formatted
+     * @return formatted string from hexadecimal value
+     *
+     */
+    public static String formatString(String string) {
         String temp = "";
 
-        temp = dString;
+        temp = string;
         temp = temp.replace("0X22", "'");
         temp = temp.replace("0X26", "&");
         temp = temp.replace("0X24", "$");
+
+        // note: unknown {amp}
         temp = temp.replace("{amp}", "&");
 
         return temp;
     }
 
-    // Convert string into proper format
-    public static String handleString(String value) {
+    /**
+     * Format string to hexadecimal value
+     *
+     * @param string string value to be formatted
+     * @return formatted hexadecimal value from string
+     *
+     */
+    public static String handleString(String string) {
         String result = "";
-        result = value.replace("'", "0x22");
+        result = string.replace("'", "0x22");
         return result;
     }
 
-    // Remove last character separator
+    /**
+     * Remove last character separator
+     *
+     * @param data string value to be formatted
+     * @param delimiter string value delimiter
+     * @return formatted string
+     *
+     */
     public static String removeLastCharSeparator(String data, String delimiter) {
         String result = "";
         if (data.length() > 0) {
